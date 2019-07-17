@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "rootDir": "./lib",
+    "outDir": "./dist",
+    "watch": false,
+    "target": "es6",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "./lib/**/*"
+  ],
+  "exclude": [
+    "views",
+    "static"
+  ]
+}
