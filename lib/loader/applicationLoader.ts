@@ -31,16 +31,19 @@ export class ApplicationLoader {
    */
   private loadService() {
     // load redis
-    if (negoRedis.default(this)) {
-      this.redis = negoRedis.default(this);
+    const redis = negoRedis.default(this);
+    const mongo = negoMongo.default(this);
+    const kafka = negoKafka.default(this);
+    if (redis) {
+      this.redis = redis;
     }
     // load mongo
-    if (negoMongo.default(this)) {
-      this.mongo = negoMongo.default(this);
+    if (mongo) {
+      this.mongo = mongo;
     }
     // load kafka
-    if (negoKafka.default(this)) {
-      this.kafka = negoKafka.default(this);
+    if (kafka) {
+      this.kafka = kafka;
     }
   }
   /**

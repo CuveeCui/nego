@@ -1,6 +1,6 @@
 import * as KoaLogger from 'koa-logger';
 import * as KoaBodyParser from 'koa-bodyparser';
-import * as KoaCors from 'koa-cors';
+import * as KoaCors from '@koa/cors';
 
 // TODO introduce koa-jwt koa-session
 

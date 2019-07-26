@@ -46,16 +46,20 @@ class NegoApplication {
     // app container is specifc, mount all servie helper logger middleware and so on
     this.container.bind('app').to(ApplicationLoader);
   }
-  public start(options: IListener): NegoApplication {
+  public start(options: IListener) {
     // use native middleware
     // use container middleware
-    this.use();
-    this.app.listen(options.port, options.cb);
-    return this;
+    this.use().listen(options.port, () => {
+      if (options.cb) {
+        return options.cb();
+      }
+      console.log(`Server is running at http://127.0.0.1:${options.port}/`);
+    });
   }
   private use() {
     this.useMiddleware();
     this.useRoutes();
+    return this.app;
   }
   private useRoutes() {
     this.controller.forEach(ctr => {
@@ -84,4 +88,5 @@ class NegoApplication {
   }
 }
 
+new NegoApplication().start({ port: 7001 });
 export { NegoApplication };

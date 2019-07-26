@@ -45,13 +45,17 @@ class NegoApplication {
     start(options) {
         // use native middleware
         // use container middleware
-        this.use();
-        this.app.listen(options.port, options.cb);
-        return this;
+        this.use().listen(options.port, () => {
+            if (options.cb) {
+                return options.cb();
+            }
+            console.log(`Server is running at http://127.0.0.1:${options.port}/`);
+        });
     }
     use() {
         this.useMiddleware();
         this.useRoutes();
+        return this.app;
     }
     useRoutes() {
         this.controller.forEach(ctr => {
@@ -77,3 +81,4 @@ class NegoApplication {
     }
 }
 exports.NegoApplication = NegoApplication;
+new NegoApplication().start({ port: 7001 });
