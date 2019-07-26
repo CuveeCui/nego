@@ -15,7 +15,7 @@
     "emitDecoratorMetadata": true
   },
   "include": [
-    "./lib/**/*", "./src/**/*", "./config/**/*", "./www/**/*"
+    "./lib/**/*"
   ],
   "exclude": [
     "views",

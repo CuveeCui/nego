@@ -2,13 +2,13 @@
   "name": "nego",
   "version": "0.1.0",
   "description": "Based on IOC and TypeScript node Framework",
-  "main": "lib/index.ts",
+  "main": "dist/index.js",
   "repository": "git@github.com:CuveeCui/nego.git",
   "author": "CuveeCui <18280133086@163.com>",
   "license": "MIT",
   "scripts": {
     "serve": "nodemon --watch 'lib/**/*' -e ts,tsx --exec 'ts-node' ./lib/index.ts",
-    "build": "tsc"
+    "build": "rm -rf dist && tsc"
   },
   "dependencies": {
     "@types/glob": "^7.1.1",
