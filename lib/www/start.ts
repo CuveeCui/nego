@@ -88,5 +88,4 @@ class NegoApplication {
   }
 }
 
-new NegoApplication().start({ port: 7001 });
 export { NegoApplication };
