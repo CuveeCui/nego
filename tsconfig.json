@@ -3,7 +3,6 @@
     "module": "commonjs",
     "noImplicitAny": false,
     "sourceMap": false,
-    "rootDir": "./lib",
     "outDir": "./dist",
     "watch": false,
     "target": "es6",
@@ -16,7 +15,7 @@
     "emitDecoratorMetadata": true
   },
   "include": [
-    "./lib/**/*"
+    "./lib/**/*", "./src/**/*", "./config/**/*", "./www/**/*"
   ],
   "exclude": [
     "views",
