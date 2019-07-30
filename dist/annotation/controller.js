@@ -13,3 +13,4 @@ function controller(identifier) {
     };
 }
 exports.controller = controller;
+//# sourceMappingURL=controller.js.map

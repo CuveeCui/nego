@@ -10,3 +10,4 @@ class ModelLoader extends baseLoader_1.BaseLoader {
     }
 }
 exports.ModelLoader = ModelLoader;
+//# sourceMappingURL=modelLoader.js.map

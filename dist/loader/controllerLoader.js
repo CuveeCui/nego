@@ -10,3 +10,4 @@ class ControllerLoader extends baseLoader_1.BaseLoader {
     }
 }
 exports.ControllerLoader = ControllerLoader;
+//# sourceMappingURL=controllerLoader.js.map

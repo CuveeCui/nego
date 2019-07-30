@@ -1,0 +1,1 @@
+{"version":3,"file":"controllerLoader.js","sourceRoot":"","sources":["../../lib/loader/controllerLoader.ts"],"names":[],"mappings":";;AAAA,6CAA0C;AAE1C,MAAa,gBAAiB,SAAQ,uBAAU;IAC9C;QACE,KAAK,EAAE,CAAC;IACV,CAAC;IACM,GAAG;QACR,OAAO,IAAI,CAAC,cAAc,CAAC,YAAY,CAAC,CAAC;IAC3C,CAAC;CACF;AAPD,4CAOC"}

@@ -9,6 +9,7 @@ import { ModelLoader } from '../loader/modelLoader';
 import { ServiceLoader } from '../loader/serviceLoader';
 import { mid } from '../middleware/middleware';
 import { ApplicationLoader } from '../loader/applicationLoader';
+import sentry from '../service/sentry';
 const camelcase = require('camelcase');
 /**
  * @desc: nego application base class, everything starts here
@@ -23,7 +24,11 @@ class NegoApplication {
   constructor() {
     this.app = new KoaApplication();
     this.router = new KoaRouter();
+    this.mount();
     this.bind();
+  }
+  private mount() {
+    sentry(this.app);
   }
   // achieve all loaders
   private bind() {
@@ -39,9 +44,6 @@ class NegoApplication {
     });
     this.service.map(ser => {
       this.container.bind(ser.key).to(ser.value);
-    });
-    this.model.map(mo => {
-      this.container.bind(mo.key).to(mo.value);
     });
     // app container is specifc, mount all servie helper logger middleware and so on
     this.container.bind('app').to(ApplicationLoader);

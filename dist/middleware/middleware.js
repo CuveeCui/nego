@@ -12,3 +12,4 @@ exports.mid = (app) => {
         origin: '*',
     }));
 };
+//# sourceMappingURL=middleware.js.map

@@ -26,3 +26,4 @@ class BaseLoader {
     }
 }
 exports.BaseLoader = BaseLoader;
+//# sourceMappingURL=baseLoader.js.map

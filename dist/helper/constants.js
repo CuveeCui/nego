@@ -7,3 +7,4 @@ exports.METHODS_GET = 'get';
 exports.METHODS_PUT = 'put';
 exports.METHODS_POST = 'post';
 exports.METHODS_DELETE = 'delete';
+//# sourceMappingURL=constants.js.map

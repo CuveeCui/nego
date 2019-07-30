@@ -24,3 +24,4 @@ function del(path) {
     return methodFactory(constants_1.METHODS_DELETE, path);
 }
 exports.del = del;
+//# sourceMappingURL=methods.js.map

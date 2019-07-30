@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Redis = require("ioredis");
-const config = require(`${process.cwd()}/config`);
+const config = require(`${process.cwd()}/config`).default;
 exports.default = (app) => {
     if (config.redis && config.redis.enable) {
         const options = config.redis.options;
@@ -22,3 +22,4 @@ exports.default = (app) => {
     }
     return undefined;
 };
+//# sourceMappingURL=redis.js.map

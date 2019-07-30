@@ -10,6 +10,7 @@ const modelLoader_1 = require("../loader/modelLoader");
 const serviceLoader_1 = require("../loader/serviceLoader");
 const middleware_1 = require("../middleware/middleware");
 const applicationLoader_1 = require("../loader/applicationLoader");
+const sentry_1 = require("../service/sentry");
 const camelcase = require('camelcase');
 /**
  * @desc: nego application base class, everything starts here
@@ -19,7 +20,11 @@ class NegoApplication {
         this.container = new inversify_1.Container();
         this.app = new KoaApplication();
         this.router = new KoaRouter();
+        this.mount();
         this.bind();
+    }
+    mount() {
+        sentry_1.default(this.app);
     }
     // achieve all loaders
     bind() {
@@ -35,9 +40,6 @@ class NegoApplication {
         });
         this.service.map(ser => {
             this.container.bind(ser.key).to(ser.value);
-        });
-        this.model.map(mo => {
-            this.container.bind(mo.key).to(mo.value);
         });
         // app container is specifc, mount all servie helper logger middleware and so on
         this.container.bind('app').to(applicationLoader_1.ApplicationLoader);
@@ -81,3 +83,4 @@ class NegoApplication {
     }
 }
 exports.NegoApplication = NegoApplication;
+//# sourceMappingURL=start.js.map

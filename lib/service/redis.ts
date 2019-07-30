@@ -1,5 +1,5 @@
 import * as Redis from 'ioredis';
-const config = require(`${process.cwd()}/config`);
+const config = require(`${process.cwd()}/config`).default;
 export default (app) => {
   if (config.redis && config.redis.enable) {
     const options = config.redis.options;

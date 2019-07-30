@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const kafka_node_1 = require("kafka-node");
-const config = require(`${process.cwd()}/config`);
+const config = require(`${process.cwd()}/config`).default;
 exports.default = (app) => {
     if (config.kafka && config.kafka.enable) {
         // tslint:disable-next-line: one-variable-per-declaration
@@ -26,3 +26,4 @@ exports.default = (app) => {
     }
     return undefined;
 };
+//# sourceMappingURL=kafka.js.map

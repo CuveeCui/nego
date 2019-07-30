@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-const config = require(`${process.cwd()}/config`);
+const config = require(`${process.cwd()}/config`).default;
 
 export default app => {
   if (config.mongo && config.mongo.enable) {

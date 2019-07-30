@@ -65,3 +65,4 @@ ApplicationLoader = __decorate([
     __metadata("design:paramtypes", [])
 ], ApplicationLoader);
 exports.ApplicationLoader = ApplicationLoader;
+//# sourceMappingURL=applicationLoader.js.map

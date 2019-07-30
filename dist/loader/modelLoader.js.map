@@ -1,0 +1,1 @@
+{"version":3,"file":"modelLoader.js","sourceRoot":"","sources":["../../lib/loader/modelLoader.ts"],"names":[],"mappings":";;AAAA,6CAA0C;AAE1C,MAAa,WAAY,SAAQ,uBAAU;IACzC;QACE,KAAK,EAAE,CAAC;IACV,CAAC;IACM,GAAG;QACR,OAAO,IAAI,CAAC,cAAc,CAAC,OAAO,CAAC,CAAC;IACtC,CAAC;CACF;AAPD,kCAOC"}

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
-const config = require(`${process.cwd()}/config`);
+const config = require(`${process.cwd()}/config`).default;
 exports.default = app => {
     if (config.mongo && config.mongo.enable) {
         const mongo = mongoose.createConnection(config.mongo.options.uri, config.mongo.options.options);
@@ -21,3 +21,4 @@ exports.default = app => {
     }
     return undefined;
 };
+//# sourceMappingURL=mongo.js.map

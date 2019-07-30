@@ -5,7 +5,7 @@ import {
   KafkaClientOptions,
   Producer,
 } from 'kafka-node';
-const config = require(`${process.cwd()}/config`);
+const config = require(`${process.cwd()}/config`).default;
 interface IKafkaApp {
   client: KafkaClient;
   producer: Producer;
